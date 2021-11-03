@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="background" src='./assets/background.gif'></div>
+    <div class="container">
+        <iframe id="yt-lofi" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <div class="widgets">
+            <div class="timer-container">
+                <div class="timer-header">Timer</div>
+                <div clas s="upper-section-timer">
+                    <div class="inputs">
+                        <div class="label">Set Timer (In Minutes) : </div>
+                        <input type="number" id="timeInput">
+                    </div>
+                    <div class="other-buttons-timer">
+                        <img id="timer"
+                            src="https://static.vecteezy.com/system/resources/previews/000/550/996/original/play-symbol-vector-icon.jpg"
+                            onclick="setup()">
+                        <img class="stop" src="./assets/stop.jpeg" onclick="stop()">
+                    </div>
+
+                </div>
+                <div id="time">
+                    00:00
+                </div>
+            </div>
+
+            <div class="youtube">
+                <iframe src="https://www.google.com/" height=460 width=1100 id="yt-window"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>
