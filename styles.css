@@ -1,18 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(33, 28, 28);
+  background-color: black;
+}
+
+.background-layer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 10%;
+  margin: auto;
   width: 100%;
   height: auto;
-  border-radius: 6px;
-
   padding: 1rem;
 }
 
@@ -25,28 +31,46 @@ body {
 }
 
 #yt-lofi {
-  position: relative;
   width: 60%;
   height: auto;
-  left: 20%;
+  margin: auto;
+}
+
+/* common Styles */
+
+.timer-container,
+.to-do-container,
+.chat-container {
+  width: 30%;
+  height: 20rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.timer-container h2,
+.to-do-container h2,
+.chat-container h2 {
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 300;
+  font-size: xx-large;
+  color: white;
+}
+
+.to-do-container,
+.chat-container,
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 /* Timer Settings */
 
-.timer-container {
-  display: block;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  background-color: rgba(255, 29, 29, 0.959);
-  width: 30%;
-  height: 16rem;
-  border-radius: 16px;
-  border: 1px solid white;
-  padding: 1rem;
-}
 .upper-section-timer {
   padding: 1.5rem;
   justify-content: center;
@@ -62,30 +86,36 @@ body {
   cursor: pointer;
   padding: 0.5rem;
 }
+
 #timer:hover,
 .stop:hover {
-  transform: scale(1.1, 1.1);
+  filter: invert(100);
 }
+
 #time {
   text-align: center;
-
   font-weight: 700;
-  font-size: 2.3em;
+  font-size: 3em;
+  color: white;
+  background-color: red;
+  border-radius: 16px;
+  border: white solid 1px;
+  width: 60%;
+  margin: auto;
 }
 #timeInput {
-  width: 90%;
+  width: 40%;
+  height: 20px;
+  margin: auto;
+  border-radius: 6px;
 }
-.timer-header {
-  text-align: center;
-  font-size: 2.4em;
-}
-.label {
-  text-align: center;
-}
+
 .inputs {
+  display: flex;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .other-buttons-timer {
   display: flex;
@@ -99,24 +129,6 @@ body {
 
 /* To Do Content */
 
-.to-do-container {
-  width: 36%;
-  height: 16rem;
-  border-radius: 16px;
-  background-color: rgb(0, 82, 235);
-  border: solid 1px white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: white;
-}
-.to-do-container ul {
-  max-height: 6rem;
-  overflow-y: auto;
-}
-.to-do-container h2 {
-  text-align: center;
-}
 .add-to-do {
   display: flex;
   justify-content: space-around;
@@ -128,11 +140,17 @@ body {
   margin: auto;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
-ul {
+.add-btn:hover {
+  filter: invert(100);
+}
+.to-do-container ul {
   padding: 0;
   width: 90%;
-  margin: auto;
+  margin: 0.2rem auto 0.2rem auto;
+  max-height: 8rem;
+  overflow-y: auto;
 }
 li {
   color: rgb(0, 0, 0);
@@ -162,4 +180,84 @@ li p {
   width: 60%;
   height: 40px;
   padding: 0.3rem;
+}
+
+/* Chat Section */
+
+.add-doubt {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+#doubt-input {
+  border-radius: 16px;
+  width: 60%;
+  height: 40px;
+  padding: 0.3rem;
+  margin: auto;
+}
+
+.doubt-submit-btn {
+  width: 15%;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.chat-container p {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+/* Credits */
+
+.credits {
+  background: rgba(255, 255, 255, 0.673);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 1013px) {
+  body {
+    background-image: url("https://1.bp.blogspot.com/-xBR7-uStkuc/Xjbm9SW2mgI/AAAAAAAALPg/yPboS5r795kxHg6FG49PB_sy9DoLD1gTgCLcBGAsYHQ/s1600/landscape-mobile-wallpaper.jpg");
+  }
+  .container {
+    width: 88%;
+  }
+  #yt-lofi {
+    width: 90%;
+  }
+  .timer-container,
+  .to-do-container,
+  .chat-container {
+    margin: 1.5rem auto 0 auto;
+    width: 80%;
+    height: auto;
+  }
+  .background-layer {
+    display: none;
+  }
+  .widgets {
+    width: 100%;
+    height: 25rem;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: auto;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.433);
+  }
+  .to-do-container ul {
+    max-height: 14rem;
+  }
+  li p {
+    font-size: 1.2em;
+  }
 }
