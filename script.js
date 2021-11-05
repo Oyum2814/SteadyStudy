@@ -19,9 +19,11 @@ function setup(){
             document.getElementById("time").innerHTML=minutes+" : "+seconds;
             
             if(time==0){
+                document.getElementById('audio-timer').play();
                 document.getElementById("time").innerHTML="Times Up!";
                 clearInterval(timer);
                 running=false;
+                
             }
             else if (stopped==true){
                 clearInterval(timer);
