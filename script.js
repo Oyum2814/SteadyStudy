@@ -1,3 +1,4 @@
+//Here we write the logic behind the Timer Applciation
 var running=false;
 var stopped=false;
 
@@ -36,4 +37,40 @@ function setup(){
 }
 function stop(){
     stopped=true;
+}
+
+//Here we write the logic behind our To Do  Application
+function AddToDo(){
+    
+
+    var text=document.getElementById('input-text');
+    console.log(text.value);
+
+    if(text.value.length>0) {
+
+        header_text=document.createElement("P");
+        var txtNode = document.createTextNode(text.value);
+        ul_item=document.getElementsByTagName('UL')[0];
+        li_item=document.createElement('LI');
+
+        header_text.appendChild(txtNode);
+        li_item.appendChild(header_text);
+        ul_item.insertBefore(li_item,ul_item.childNodes[0]);
+
+        var close = document.getElementsByClassName("close");
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li_item.appendChild(span);
+
+        for (i = 0; i < close.length; i++) { // A list item should disappear if the close button is clicked
+            close[i].onclick = function() {
+            var div = this.parentElement;
+            div.parentNode.removeChild(div);
+            }
+        }
+        
+        text.value="";
+    }
 }
