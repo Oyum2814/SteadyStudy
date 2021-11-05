@@ -79,7 +79,9 @@ body {
   border-radius: 50%;
 }
 /* Timer Settings */
-
+#audio-timer {
+  display: none;
+}
 .upper-section-timer {
   padding: 1.5rem;
   justify-content: center;
