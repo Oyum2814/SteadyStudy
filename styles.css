@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 
 .background-layer {
@@ -69,6 +68,16 @@ body {
   justify-content: space-around;
 }
 
+#instagram,
+#github,
+#email {
+  width: 2%;
+  margin: 0.3rem;
+}
+#github,
+#email {
+  border-radius: 50%;
+}
 /* Timer Settings */
 
 .upper-section-timer {
