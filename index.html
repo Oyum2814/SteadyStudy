@@ -6,31 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
     <title>Steady Study</title>
 </head>
 
 <body>
-
+    <img src="https://images.unsplash.com/photo-1511300636408-a63a89df3482?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        class="background-layer">
     <div class="container">
         <iframe id="yt-lofi" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube lofi player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 
         <div class="widgets">
+
             <div class="timer-container">
-                <div class="timer-header">Timer</div>
-                <div clas s="upper-section-timer">
+                <h2>Timer</h2>
+                <div class="upper-section-timer">
                     <div class="inputs">
-                        <div class="label">Set Timer (In Minutes) : </div>
-                        <input type="number" id="timeInput">
+                        <input type="number" id="timeInput" placeholder="Set Time in Minutes" min="1" max="600"
+                            maxlength="3">
                     </div>
                     <div class="other-buttons-timer">
-                        <img id="timer"
-                            src="https://static.vecteezy.com/system/resources/previews/000/550/996/original/play-symbol-vector-icon.jpg"
-                            onclick="setup()">
-                        <img class="stop" src="./assets/stop.jpeg" onclick="stop()">
+                        <img id="timer" src="http://cdn.onlinewebfonts.com/svg/img_42264.png" onclick="setup()">
+                        <img class="stop" src="http://cdn.onlinewebfonts.com/svg/img_519372.png" onclick="stop()">
                     </div>
 
                 </div>
@@ -38,6 +38,7 @@
                     00:00
                 </div>
             </div>
+
             <div class="to-do-container">
                 <h2>To Do</h2>
                 <ul>
@@ -48,21 +49,32 @@
                     <img src="https://cdn3.iconfinder.com/data/icons/stroke/53/Button-512.png" onclick="AddToDo()"
                         class="add-btn">
                 </div>
-
             </div>
 
+            <div class="chat-container">
+                <h2>Ask A Doubt</h2>
+                <p>Coming Soon</p>
+                <ul>
 
+                </ul>
+                <div class="add-doubt">
+                    <input type="text" maxlength="100" id="doubt-input">
+                    <!-- <img src="https://www.iconbunny.com/icons/media/catalog/product/6/0/602.9-send-message-icon-iconbunny.jpg"
+                        class="doubt-submit-btn" onclick="AddDoubt()"> -->
+                </div>
+
+            </div>
         </div>
-        <div class="google">
-            <!-- <iframe src="https://www.google.com/" height=460 width=1100 id="yt-window"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe> -->
-
+        <div class="credits">
+            This Project is an Initivate By Om Mukherjee. The Source Code for this project will be visible soon.
+            <div class="socials">
+                <a href="" id="instagram">
+                    <img src="">
+                </a>
+                <a href="" id="Github"></a>
+                <a href="" id="email"></a>
+            </div>
         </div>
-
-
-
-    </div>
     </div>
 
 </body>
