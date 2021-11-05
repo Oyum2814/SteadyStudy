@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <img src="https://images.unsplash.com/photo-1511300636408-a63a89df3482?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
         class="background-layer">
     <div class="container">
@@ -35,7 +36,12 @@
                         <img id="timer" src="http://cdn.onlinewebfonts.com/svg/img_42264.png" onclick="setup()">
                         <img class="stop" src="http://cdn.onlinewebfonts.com/svg/img_519372.png" onclick="stop()">
                     </div>
-
+                    <audio id="audio-timer" controls>
+                        <source
+                            src="https://firebasestorage.googleapis.com/v0/b/projectbucket-52626.appspot.com/o/ding.mp3?alt=media&token=70d26e14-78ad-4289-8c0e-c7355ef85562"
+                            type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
                 <div id="time">
                     00:00
