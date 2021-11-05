@@ -44,7 +44,6 @@ function AddToDo(){
     
 
     var text=document.getElementById('input-text');
-    console.log(text.value);
 
     if(text.value.length>0) {
 
@@ -73,4 +72,11 @@ function AddToDo(){
         
         text.value="";
     }
+}
+
+//Here we write the logic behind our Chat Application 
+doubts=[];
+
+function AddDoubt(){
+  
 }
