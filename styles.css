@@ -271,4 +271,9 @@ li p {
   li p {
     font-size: 1.2em;
   }
+  #instagram,
+  #github,
+  #email {
+    width: 10%;
+
 }
