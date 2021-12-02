@@ -41,7 +41,8 @@ body {
 .to-do-container,
 .chat-container {
   width: 30%;
-  height: 20rem;
+  height: auto;
+  padding: 0.3rem;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -54,9 +55,9 @@ body {
 .to-do-container h2,
 .chat-container h2 {
   text-align: center;
-  font-family: "Abril Fatface", cursive;
-  font-weight: 300;
-  font-size: xx-large;
+  font-family: Roboto, "Helvetica Neue";
+  font-weight: 600;
+  font-size: 2.3vmax;
   color: white;
 }
 
@@ -65,7 +66,7 @@ body {
 .timer-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #instagram,
@@ -83,7 +84,6 @@ body {
   display: none;
 }
 .upper-section-timer {
-  padding: 1.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -108,17 +108,17 @@ body {
   font-weight: 700;
   font-size: 3em;
   color: white;
-  background-color: red;
   border-radius: 16px;
   border: white solid 1px;
-  width: 60%;
-  margin: auto;
+  width: auto;
+  margin: 0.3rem auto 0.3rem auto;
 }
 #timeInput {
-  width: 40%;
-  height: 20px;
+  width: 20%;
+  height: 60px;
   margin: auto;
   border-radius: 6px;
+  font-size: 1.6em;
 }
 
 .inputs {
@@ -189,7 +189,7 @@ li p {
 #input-text {
   border-radius: 16px;
   width: 60%;
-  height: 40px;
+  height: 30px;
   padding: 0.3rem;
 }
 
@@ -234,11 +234,12 @@ li p {
   text-align: center;
   color: rgb(0, 0, 0);
   padding: 1.5rem;
+  font-size: 1.3em;
 }
 
 @media screen and (max-width: 1013px) {
   body {
-    background-image: url("https://1.bp.blogspot.com/-xBR7-uStkuc/Xjbm9SW2mgI/AAAAAAAALPg/yPboS5r795kxHg6FG49PB_sy9DoLD1gTgCLcBGAsYHQ/s1600/landscape-mobile-wallpaper.jpg");
+    background-color: rgb(0, 0, 0);
   }
   .container {
     width: 88%;
@@ -252,6 +253,7 @@ li p {
     margin: 1.5rem auto 0 auto;
     width: 80%;
     height: auto;
+    background-color: rgb(190, 102, 117);
   }
   .background-layer {
     display: none;
@@ -262,7 +264,6 @@ li p {
     margin-top: 1.5rem;
     display: grid;
     grid-template-columns: auto;
-
   }
   .to-do-container ul {
     max-height: 14rem;
@@ -274,5 +275,5 @@ li p {
   #github,
   #email {
     width: 10%;
-
+  }
 }
