@@ -1,3 +1,3 @@
 # SteadyStudy
 Project under Construction
-http://www.steadystudy.cf/
+https://oyum2814.github.io/SteadyStudy/
